@@ -5,9 +5,12 @@ A modern digital banking web application built using <b>HTML</b>, <b>Tailwind CS
 </p>
 
 ---
-
 ## 🖼 App Preview
-<img src="https://i.ibb.co/fdL5v0TY/Screenshot-2025-11-19-122523.png" alt="App Screenshot">
+<img width="500" height="600" alt="image" src="https://github.com/user-attachments/assets/b66d1073-efd5-40bb-b504-73e08ea3a385" />
+<img width="500" height="430" alt="image" src="https://github.com/user-attachments/assets/5a22cbc4-e4cd-4b4d-82c6-6ae475a42989" />
+
+
+ 
 
 ---
 
