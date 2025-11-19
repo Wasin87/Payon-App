@@ -2,26 +2,33 @@
 document.getElementById('loginButton').addEventListener('click', function(e) {
     e.preventDefault();
 
-    const mobileNumber = 1774178772;
-    const pinNumber = 5656;
-
     const mobileNumberValue = document.getElementById('mobile-number').value.trim();
     const pinNumberValue = document.getElementById('pin-number').value.trim();
 
+    // Convert Number
     const mobileNumberValueConverted = parseInt(mobileNumberValue);
     const pinNumberValueConverted = parseInt(pinNumberValue);
 
-    if (mobileNumberValueConverted === mobileNumber && pinNumberValueConverted === pinNumber) {
-        // Successful login → redirect
-        window.location.href = "home.html";
-    } else if (mobileNumberValueConverted !== mobileNumber && pinNumberValueConverted !== pinNumber) {
-        alert("⚠️ Invalid Mobile & Pin number");
-    } else if (mobileNumberValueConverted !== mobileNumber) {
-        alert("Invalid Mobile number ❌");
-    } else if (pinNumberValueConverted !== pinNumber) {
-        alert("Invalid Pin number ❌");
+    // --- Validation Added Here ---
+    if (mobileNumberValue === "" || pinNumberValue === "") {
+        alert("⚠️ Mobile number & Pin required!");
+        return;
     }
+
+    if (isNaN(mobileNumberValueConverted) || mobileNumberValue.length < 10) {
+        alert("❌ Enter a valid mobile number");
+        return;
+    }
+
+    if (isNaN(pinNumberValueConverted) || pinNumberValue.length < 3) {
+        alert("❌ Enter a valid pin number");
+        return;
+    }
+
+    // --- If validation OK → Login success ---
+    window.location.href = "home.html";
 });
+
 
 // Toggle Pin Visibility
 const pinInput = document.getElementById("pin-number");
